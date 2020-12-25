@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap&subset=latin-ext");
+
+:root {
+  --dark-blue: #060016;
+  --font-color: white;
+}
+
+@font-face {
+  font-family: "Matroska";
+  src: url(../assets/Matroska.ttf), url(../assets/Matroska.otf);
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  letter-spacing: 0;
+}
+
+body {
+  background-color: var(--dark-blue);
+}
+
+html,
+body {
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Matroska";
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--font-color);
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--font-color);
+}
+
+h4 {
+  font-family: "Montserrat";
+  font-size: 147px;
+  position: absolute;
+  color: var(--font-color);
+  opacity: 0.15;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  left: 0;
+  line-height: 120px;
+}
+
+p {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--font-color);
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  overflow: auto;
+  height: 100vh;
+  scroll-snap-type: block mandatory;
+}
+
+section {
+  position: relative;
+  scroll-snap-align: start;
+}
+
+/*HOME SECTION*/
+
+section.home {
+  padding: 0 24px 0 48px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.home .intro-wrapper {
+  width: 50%;
+  padding-right: 12px;
+  position: relative;
+}
+.home .intro-wrapper .name-wrapper {
+  margin-bottom: 12px;
+}
+
+.home .intro-wrapper .position-wrapper {
+  margin-bottom: 24px;
+}
+
+.home .intro-wrapper .social-media {
+  position: absolute;
+  bottom: 0;
+}
+
+.home .intro-wrapper .social-media a {
+  margin-left: 12px;
+}
+
+.home .intro-wrapper .social-media a:first-child {
+  margin-left: 0px;
+}
+
+.home .img-wrapper {
+  width: 50%;
+  height: 240px;
+  border-radius: 100px;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.home .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+/*TECHNOLOGIES SECTION*/
+
+section.technologies {
+  height: 100vh;
+}
+
+.technologies .bg-text-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+}
+
+.technologies .technology-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.technologies .technology-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.technologies .technology-wrapper .img-title-wrapper {
+  position: absolute;
+  right: 24px;
+  bottom: 12px;
+  object-fit: cover;
+}
+
+.technologies .technology-wrapper .img-title-wrapper h1 {
+  text-align: right;
+}
+
+.technologies .technology-wrapper .circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(234, 234, 234, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.technologies .technology-wrapper .circle img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.technologies .technology-wrapper .vue-wrapper {
+  position: absolute;
+  top: 64px;
+  left: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.technologies .technology-wrapper .vue-wrapper img {
+  width: unset;
+  height: 22px;
+  transform: translateY(2px);
+}
+
+.technologies .technology-wrapper .react-wrapper {
+  position: absolute;
+  top: 18px;
+  left: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.technologies .technology-wrapper .react-wrapper img {
+  width: 32px;
+  height: 32px;
+}
+
+.technologies .technology-wrapper .ts-wrapper {
+  position: absolute;
+  top: 95px;
+  left: 128px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.technologies .technology-wrapper .js-wrapper {
+  position: absolute;
+  top: 163px;
+  left: 168px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.technologies .technology-wrapper .js-wrapper img {
+  width: 22px;
+  height: 22px;
+}
+
+.technologies .technology-wrapper .css-wrapper {
+  position: absolute;
+  top: 155px;
+  left: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.technologies .technology-wrapper .css-wrapper img {
+  width: unset;
+  height: 32px;
+}
+.technologies .projects-encourager {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.technologies .projects-encourager .text-wrapper h1 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* PROJECTS SECTION */
+section.projects {
+  height: 100vh;
+}
+
+.projects h4 {
+  font-size: 110px;
+}
+
+.projects .bg-text-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+}
+
+.projects .projects-container {
+  width: 100%;
+}
+
+.projects .projects-container .project-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.projects .projects-container .project-wrapper img {
+  opacity: 0.6;
+}
+
+.projects .projects-container .project-wrapper h1 {
+  position: absolute;
+  bottom: 12px;
+  right: 24px;
+  text-align: right;
+}
+
+/*scrollbar*/
+
+.scrollbar {
+  position: absolute;
+  width: 48px;
+  height: 400%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.scrollbar .scroll {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.scrollbar .scroll .section-name {
+  color: white;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 12px;
+  width: fit-content;
+  margin: 0 auto 8px;
+}
+
+.scrollbar .scroll .scroll-line {
+  width: 2px;
+  height: 250px;
+  content: "";
+  background-color: white;
+  margin: 0 auto;
+}
+
+.scrollbar .scroll .scroll-bar {
+  width: 10px;
+  height: 200px;
+  content: "";
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, -50px, 0);
+}
