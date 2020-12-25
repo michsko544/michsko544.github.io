@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michał Skorus</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../assets/swiper.css">
   </head>
   <body>
     <main>
@@ -43,7 +44,7 @@
             <div class="bg-text-wrapper">
                 <h4>TECH</h4>
             </div>
-            <div class="flex">
+            <div class="flex column">
                 <article class="technology-wrapper">
                     <img src="../assets/alexandru-acea-code-workspace.png" alt="workspace-computer">
                     <div class="img-title-wrapper">
@@ -51,33 +52,60 @@
                     </div>
                     <div class="vue-wrapper" data-tilt data-tilt-max="25" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="1">
                         <div class="circle">
-                            <img src="" alt="" />
+                            <img src="../assets/vue-icon.png" alt="vue-icon" />
                         </div>
                     </div>
                     <div class="react-wrapper" data-tilt data-tilt-max="25" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="1">
                         <div class="circle">
-                            <img src="" alt="" />
+                            <img src="../assets/react-icon.png" alt="react-icon" />
                         </div>
                     </div>
                     <div class="ts-wrapper" data-tilt data-tilt-max="25" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="1">
                         <div class="circle">
-                            <img src="" alt="" />
+                            <img src="../assets/ts-icon.png" alt="typescript-icon" />
                         </div>
                     </div>
                     <div class="js-wrapper" data-tilt data-tilt-max="25" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="1">
                         <div class="circle">
-                            <img src="" alt="" />
+                            <img src="../assets/js-icon.png" alt="javascript-icon" />
                         </div>
                     </div>
                     <div class="css-wrapper" data-tilt data-tilt-max="25" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="1">
                         <div class="circle">
-                            <img src="" alt="" />
+                            <img src="../assets/css-icon.png" alt="css-icon" />
                         </div>
                     </div>
                 </article>
+
+                <div class="projects-encourager">
+                    <div class="text-wrapper">
+                        <h1>Check out my projects</h1>
+                    </div>
+                    <img src="../assets/arrow-down.svg" alt="arrow-down">
+                </div>
             </div>
         </section>
-        <section class="projects"></section>
+        <section class="projects">
+            <div class="bg-text-wrapper">
+                <h4>PROJECTS</h4>
+            </div>
+            <div class="projects-container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="project-wrapper swiper-slide">
+                        <img src="../assets/hermoso.png" alt="hermoso-butik"/>
+                        <h1>Hermoso<br>butik</h1>
+                    </div>
+                    <div class="project-wrapper swiper-slide">
+                        <img src="../assets/hermoso.png" alt="hermoso-butik"/>
+                        <h1>Hermoso<br>butik</h1>
+                    </div>
+                    <div class="project-wrapper swiper-slide">
+                        <img src="../assets/hermoso.png" alt="hermoso-butik"/>
+                        <h1>Hermoso<br>butik</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="contact"></section>
     </main>
     <div class="scrollbar">
@@ -89,5 +117,11 @@
     </div>
     <div class="loader"></div>
     <script src="../assets/vanilla-tilt.min.js"></script>
+    <script src="../assets/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container',{
+            loop:true
+        });
+      </script>
   </body>
 </html>

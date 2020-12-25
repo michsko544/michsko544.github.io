@@ -175,6 +175,15 @@ section.technologies {
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(234, 234, 234, 0.8);
   backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.technologies .technology-wrapper .circle img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
 }
 
 .technologies .technology-wrapper .vue-wrapper {
@@ -185,12 +194,23 @@ section.technologies {
   overflow: hidden;
 }
 
+.technologies .technology-wrapper .vue-wrapper img {
+  width: unset;
+  height: 22px;
+  transform: translateY(2px);
+}
+
 .technologies .technology-wrapper .react-wrapper {
   position: absolute;
   top: 18px;
   left: 120px;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.technologies .technology-wrapper .react-wrapper img {
+  width: 32px;
+  height: 32px;
 }
 
 .technologies .technology-wrapper .ts-wrapper {
@@ -203,18 +223,78 @@ section.technologies {
 
 .technologies .technology-wrapper .js-wrapper {
   position: absolute;
+  top: 163px;
+  left: 168px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.technologies .technology-wrapper .js-wrapper img {
+  width: 22px;
+  height: 22px;
+}
+
+.technologies .technology-wrapper .css-wrapper {
+  position: absolute;
   top: 155px;
   left: 70px;
   border-radius: 50%;
   overflow: hidden;
 }
 
-.technologies .technology-wrapper .css-wrapper {
+.technologies .technology-wrapper .css-wrapper img {
+  width: unset;
+  height: 32px;
+}
+.technologies .projects-encourager {
+  width: 100%;
   position: absolute;
-  top: 163px;
-  left: 168px;
-  border-radius: 50%;
-  overflow: hidden;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.technologies .projects-encourager .text-wrapper h1 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* PROJECTS SECTION */
+section.projects {
+  height: 100vh;
+}
+
+.projects h4 {
+  font-size: 110px;
+}
+
+.projects .bg-text-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+}
+
+.projects .projects-container {
+  width: 100%;
+}
+
+.projects .projects-container .project-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.projects .projects-container .project-wrapper img {
+  opacity: 0.6;
+}
+
+.projects .projects-container .project-wrapper h1 {
+  position: absolute;
+  bottom: 12px;
+  right: 24px;
+  text-align: right;
 }
 
 /*scrollbar*/
@@ -225,6 +305,7 @@ section.technologies {
   height: 400%;
   left: 0;
   top: 0;
+  z-index: 10;
 }
 
 .scrollbar .scroll {

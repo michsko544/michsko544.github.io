@@ -4,6 +4,7 @@
   "description": "Portfolio app about me",
   "main": "index.js",
   "scripts": {
+    "web": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,5 +12,9 @@
     "url": "portfolioapp"
   },
   "author": "Michał Skorus",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
 }
