@@ -20,20 +20,26 @@
                     <div class="position-wrapper">
                         <h2>Frontend Dev</h1>
                     </div>
-                    <div>
-                    <p>Hi! I’m IT student 🎓 and I like coding 💻 web apps. My favourite technology is ⚛️ React. I love inline skating and meet new people. Live in Katowice 📍 city of Poland 🇵🇱</p>
+                    <div class="aboutme-wrapper">
+                        <p>Hi! I’m IT student 🎓 and I like coding 💻 web apps. My favourite technology is ⚛️ React. I love inline skating and meet new people. Live in Katowice 📍 city of Poland 🇵🇱</p>
                     </div>
-                    <div class="social-media">
-                        <a href="https://pl.linkedin.com/in/micha%C5%82-skorus" target="_blank" role="button">
-                            <img src="../assets/linkedin.svg" alt="linkedin-icon">
-                        </a>
-                        <a href="https://github.com/michsko544" target="_blank" role="button">
-                            <img src="../assets/github.svg" alt="github-icon">
-                        </a>
-                        <a href="#" role="button">
-                            <img src="../assets/stackoverflow.svg" alt="stackoverflow-icon">
-                        </a>
-                    </div>
+                    <ul class="social-media">
+                        <li>
+                            <a href="https://pl.linkedin.com/in/micha%C5%82-skorus" target="_blank" role="button" >
+                                <img src="../assets/linkedin.svg" alt="linkedin-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/michsko544" target="_blank" role="button">
+                                <img src="../assets/github.svg" alt="github-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" role="button">
+                                <img src="../assets/stackoverflow.svg" alt="stackoverflow-icon" >
+                            </a>
+                        </li>
+                    </ul>
                 </article>
                 <div class="img-wrapper">
                     <img src="../assets/man-in-camel-coat.jfif" alt="Michał Skorus" />
@@ -105,19 +111,28 @@
                     </div>
                 </div>
             </div>
+            <div class="scroll-icon-wrapper">
+                <img src="./assets/arrows.svg" alt="arrows-icon" />
+            </div>
         </section>
         <section class="contact"></section>
     </main>
     <div class="scrollbar">
         <div class="scroll">
-            <span class="section-name">HOME</span>
+            <span class="section-name">home</span>
             <div class="scroll-line"></div>
             <div class="scroll-bar"></div>
         </div>
     </div>
-    <div class="loader"></div>
+    <div class="loader">
+        <div class="text-wrapper">
+            <h1>Welcome!</h1>
+            <h2><span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span></h2>
+        </div>
+    </div>
     <script src="./assets/vanilla-tilt.min.js"></script>
     <script src="./assets/swiper.min.js"></script>
+    <script src="./src/script.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container',{
             loop:true
