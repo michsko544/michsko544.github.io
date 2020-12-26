@@ -24,19 +24,19 @@ document.querySelector("main").addEventListener("scroll",function(){
     }
 
     if(direction<0){
-        if(scrollVal>=homeY && scrollVal<techY && oldText!=="home"){
+        if(scrollVal + offset>=homeY && scrollVal + offset<techY && oldText!=="home"){
             animation("home");
             scroll(-50);
         }
-        else if(scrollVal>=techY && scrollVal<projY && oldText!=="technologies"){
+        else if(scrollVal + offset>=techY && scrollVal + offset<projY && oldText!=="technologies"){
             animation("technologies");
             scroll(-25);
         }
-        else if(scrollVal>=projY && oldText!=="projects"){
+        else if(scrollVal + offset>=projY && oldText!=="projects"){
             animation("projects",0);
             scroll(0);
         }
-    } else {
+    } else if(direction>0) {
         if(scrollVal + screenHeight - offset >= techY && scrollVal + screenHeight - offset< projY && oldText!=="technologies"){
             animation("technologies");
             scroll(-25);

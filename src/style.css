@@ -14,7 +14,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
   letter-spacing: 0;
 }
 
@@ -221,6 +221,11 @@ section.technologies {
   height: 100vh;
 }
 
+.technologies h4 {
+  font-size: 72px;
+  line-height: 68px;
+}
+
 .technologies .bg-text-wrapper {
   display: flex;
   align-items: center;
@@ -342,6 +347,50 @@ section.technologies {
   margin-bottom: 12px;
 }
 
+.features {
+  padding: 0 24px;
+  width: 100%;
+}
+
+.features h1 {
+  text-align: center;
+  width: 100%;
+  margin: 32px auto;
+}
+
+.features ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+}
+
+.features ul > * {
+  display: inline-block;
+  flex-basis: 50%;
+}
+
+.features ul li {
+  margin-left: 24px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.features ul li p {
+  display: inline;
+  margin-left: 8px;
+}
+
+.features ul li:before {
+  content: "";
+  min-width: 8px;
+  min-height: 7px;
+  display: inline-block;
+  background-image: url("../assets/check-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 /* PROJECTS SECTION */
 section.projects {
   height: 100vh;
@@ -349,6 +398,7 @@ section.projects {
 
 .projects h4 {
   font-size: 110px;
+  line-height: 96px;
 }
 
 .projects .bg-text-wrapper {
