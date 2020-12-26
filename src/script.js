@@ -11,7 +11,7 @@ document.querySelector("main").addEventListener("scroll",function(){
     var durationTime=1000;  
     var type ="ease-in-out";
     var screenHeight = screen.height;
-    var offset = 100;
+    var offset = 150;
 
     function animation(name){
         document.querySelector(".scroll").animate([{opacity:0},{visibility:"hidden"}],{duration:durationTime,easing:type})
@@ -23,25 +23,27 @@ document.querySelector("main").addEventListener("scroll",function(){
         setTimeout(function(){document.querySelector(".scroll-bar").style.transform = "translate3d(-50%, " + scrollVal + "px, 0)"},durationTime-10);
     }
 
+    //scroll up
     if(direction<0){
-        if(scrollVal + offset>=homeY && scrollVal + offset<techY && oldText!=="home"){
+        var scrollTrigger = scrollVal + offset;
+        if(scrollVal + offset >=homeY && scrollVal + offset<techY && oldText!=="home"){
             animation("home");
             scroll(-50);
         }
-        else if(scrollVal + offset>=techY && scrollVal + offset<projY && oldText!=="technologies"){
+        else if(scrollVal + offset >=techY && scrollVal + offset<projY && oldText!=="technologies"){
             animation("technologies");
             scroll(-25);
         }
-        else if(scrollVal + offset>=projY && oldText!=="projects"){
-            animation("projects",0);
-            scroll(0);
-        }
+    //scroll down
     } else if(direction>0) {
-        if(scrollVal + screenHeight - offset >= techY && scrollVal + screenHeight - offset< projY && oldText!=="technologies"){
+        var scrollTrigger = scrollVal + screenHeight - offset;
+
+        if( scrollTrigger>= techY && scrollTrigger < projY && oldText!=="technologies"){
             animation("technologies");
             scroll(-25);
         }
-        if(scrollVal + screenHeight - offset >= projY && oldText!=="projects"){
+        if( scrollTrigger >= projY && oldText!=="projects"){
+            console.log(scrollTrigger, projY);
             animation("projects");
             scroll(0);
         }
