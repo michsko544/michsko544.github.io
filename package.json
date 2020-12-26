@@ -11,9 +11,5 @@
     "url": "portfolioapp"
   },
   "author": "Michał Skorus",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "path": "^0.12.7"
-  }
+  "license": "ISC"
 }
