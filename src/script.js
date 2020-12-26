@@ -43,7 +43,6 @@ document.querySelector("main").addEventListener("scroll",function(){
             scroll(-25);
         }
         if( scrollTrigger >= projY && oldText!=="projects"){
-            console.log(scrollTrigger, projY);
             animation("projects");
             scroll(0);
         }
