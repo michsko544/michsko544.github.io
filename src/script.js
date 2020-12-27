@@ -4,8 +4,8 @@ var projY = document.querySelector(".projects").getBoundingClientRect().y;
 var oldText = "home";
 var oldScroll = 0;
 
-document.querySelector("main").addEventListener("scroll",function(){
-    var scrollVal = document.querySelector("main").scrollTop;
+document.addEventListener("scroll",function(){
+    var scrollVal = window.scrollY;
     var direction = scrollVal - oldScroll;
     oldScroll = scrollVal
     var durationTime=1000;  
@@ -26,7 +26,8 @@ document.querySelector("main").addEventListener("scroll",function(){
     //scroll up
     if(direction<0){
         var scrollTrigger = scrollVal + offset;
-        if(scrollVal + offset >=homeY && scrollVal + offset<techY && oldText!=="home"){
+
+        if(scrollTrigger >= homeY && scrollTrigger < techY && oldText!=="home"){
             animation("home");
             scroll(-50);
         }

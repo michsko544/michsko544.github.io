@@ -6,9 +6,10 @@
     <title>Michał Skorus</title>
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="stylesheet" href="./assets/swiper.css">
-  </head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
   <body>
-    <main>
+
         <div class="navbar"></div>
         <section class="home">
             <h4>HOME</h4>
@@ -83,21 +84,21 @@
                     </div>
                 </article>
                 <div class="features">
-                    <h1>My sites:</h1>
+                    <h1 data-aos="zoom-in-up" data-aos-duration="1000" data-aos-offset="300">My sites:</h1>
                     <ul>
-                        <div class="column-1">
+                        <div class="column-1" data-aos="zoom-out" data-aos-delay="500" data-aos-offset="200">
                             <li><p>exchange data with APIs</p></li>
                             <li><p>have responsive design</p></li>
                             <li><p>are adjusted to client requirements</p></li>
                         </div>
-                        <div class="column-2">
+                        <div class="column-2" data-aos="zoom-out" data-aos-delay="500" data-aos-offset="200">
                             <li><p>have brilliant performance</p></li>
                             <li><p>include amazing animations</p></li>
                             <li><p>have good SEO</p></li>
                         </div>
                     </ul>
                 </div>
-                <div class="projects-encourager">
+                <div class="projects-encourager" data-aos="zoom-in-down" data-aos-delay="3000" data-aos-offset="-300">
                     <div class="text-wrapper">
                         <h1>Check out my projects</h1>
                     </div>
@@ -130,8 +131,8 @@
             </div>
             <a href="mailto:michsko@poczta.onet.pl">
                 <div class="contact-container">
-                    <h1>Contact</h1>
-                    <h2>michsko@poczta.onet.pl</h2>
+                    <h1 data-aos="zoom-in-down" data-aos-duration="1000" data-aos-offset="300">Contact</h1>
+                    <h2 data-aos="zoom-out" data-aos-delay="500">michsko@poczta.onet.pl</h2>
                 </div>
             </a>
             <footer>
@@ -160,29 +161,31 @@
                 </div>
             </footer>
         </section>
-        <section class="contact"></section>
         
-    </main>
-    <div class="scrollbar">
-        <div class="scroll">
-            <span class="section-name">home</span>
-            <div class="scroll-line"></div>
-            <div class="scroll-bar"></div>
+        <div class="scrollbar">
+            <div class="scroll">
+                <span class="section-name">home</span>
+                <div class="scroll-line"></div>
+                <div class="scroll-bar"></div>
+            </div>
         </div>
-    </div>
-    <div class="loader">
-        <div class="text-wrapper">
-            <h1>Welcome!</h1>
-            <h2><span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span></h2>
+        <div class="loader">
+            <div class="text-wrapper">
+                <h1>Welcome!</h1>
+                <h2><span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span> <span>Loading content...</span></h2>
+            </div>
         </div>
-    </div>
-    <script src="./assets/vanilla-tilt.min.js"></script>
-    <script src="./assets/swiper.min.js"></script>
-    <script src="./src/script.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container',{
-            loop:true
-        });
-      </script>
+        <script src="./assets/vanilla-tilt.min.js"></script>
+        <script src="./assets/swiper.min.js"></script>
+        <script type="text/javascript" src="./src/script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript">
+            var swiper = new Swiper('.swiper-container',{
+                loop:true
+            });
+        </script>
+        <script type="text/javascript">
+            AOS.init();
+        </script>
   </body>
 </html>
