@@ -6,6 +6,7 @@
     <title>Michał Skorus</title>
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="stylesheet" href="./assets/swiper.css">
+    <link rel="stylesheet" href="./assets/sal.css">
   </head>
   <body>
     <main>
@@ -83,21 +84,36 @@
                     </div>
                 </article>
                 <div class="features">
-                    <h1>My sites:</h1>
+                    <h1 data-sal="slide-down"
+                    data-sal-delay="500"
+                    data-sal-duration="500"
+                    data-sal-easing="ease-out-back">My sites:</h1>
                     <ul>
-                        <div class="column-1">
+                        <div class="column-1" 
+                            data-sal="fade"
+                            data-sal-easing="ease-out-quad"
+                            style="--sal-duration: 1.7s; --sal-delay: 0.7s;"
+                        >
                             <li><p>exchange data with APIs</p></li>
                             <li><p>have responsive design</p></li>
                             <li><p>are adjusted to client requirements</p></li>
                         </div>
-                        <div class="column-2">
+                        <div class="column-2" 
+                            data-sal="fade"
+                            data-sal-easing="ease-out-quad"
+                            style="--sal-duration: 1.7s; --sal-delay: 0.7s;"
+                        >
                             <li><p>have brilliant performance</p></li>
                             <li><p>include amazing animations</p></li>
                             <li><p>have good SEO</p></li>
                         </div>
                     </ul>
                 </div>
-                <div class="projects-encourager">
+                <div class="projects-encourager" 
+                data-sal="zoom-in"
+                data-sal-easing="ease-out-quad"
+                style="--sal-duration: 1s; --sal-delay: 2s;"
+                >
                     <div class="text-wrapper">
                         <h1>Check out my projects</h1>
                     </div>
@@ -112,16 +128,16 @@
             <div class="projects-container swiper-container">
                 <div class="swiper-wrapper">
                     <div class="project-wrapper swiper-slide">
-                        <img src="../assets/teamfood.png" alt="teamfood"  style="opacity:0.8"/>
-                        <h1>Teamfood<br>Order-food app</h1>
-                    </div>
-                    <div class="project-wrapper swiper-slide">
                         <img src="../assets/hermoso.png" alt="hermoso-butik"/>
                         <h1>Hermoso<br>butik</h1>
                     </div>
                     <div class="project-wrapper swiper-slide">
-                        <img src="../assets/hermoso.png" alt="hermoso-butik" />
-                        <h1>Hermoso<br>butik</h1>
+                        <img src="../assets/teamfood.png" alt="teamfood"  style="opacity:0.8"/>
+                        <h1>Teamfood<br>Order-food app</h1>
+                    </div>
+                    <div class="project-wrapper swiper-slide">
+                        <img src="../assets/qyral.jpg" alt="qyral" />
+                        <h1>Qyral<br>skincare</h1>
                     </div>
                 </div>
             </div>
@@ -130,8 +146,21 @@
             </div>
             <a href="mailto:michsko@poczta.onet.pl">
                 <div class="contact-container">
-                    <h1>Contact</h1>
-                    <h2>michsko@poczta.onet.pl</h2>
+                    <h1 
+                        data-sal="slide-down"
+                        data-sal-delay="500"
+                        data-sal-duration="500"
+                        data-sal-easing="ease-out-back"
+                    >
+                        Contact
+                    </h1>
+                    <h2 
+                        data-sal="fade"
+                        data-sal-easing="ease-out-quad"
+                        style="--sal-duration: 1.7s; --sal-delay: 0.7s;"
+                    >
+                        michsko@poczta.onet.pl
+                    </h2>
                 </div>
             </a>
             <footer>
@@ -159,9 +188,7 @@
                     <div class="small-text">Site by Michał Skorus</div>
                 </div>
             </footer>
-        </section>
-        <section class="contact"></section>
-        
+        </section>        
     </main>
     <div class="scrollbar">
         <div class="scroll">
@@ -177,12 +204,18 @@
         </div>
     </div>
     <script src="./assets/vanilla-tilt.min.js"></script>
+    <script src="./assets/sal.js"></script>
     <script src="./assets/swiper.min.js"></script>
     <script src="./src/script.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container',{
             loop:true
         });
-      </script>
+    </script>
+    <script>
+        sal({
+            once:false
+        });
+    </script>
   </body>
 </html>

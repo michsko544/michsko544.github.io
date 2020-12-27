@@ -42,7 +42,7 @@ h1 {
 h2 {
   font-family: "Montserrat";
   font-weight: 700;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--font-color);
 }
 
@@ -63,7 +63,7 @@ p {
   font-weight: 500;
   font-style: normal;
   font-weight: normal;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 12px;
   color: var(--font-color);
 }
@@ -188,7 +188,7 @@ section.home {
 
 .home .img-wrapper {
   width: 50%;
-  height: 240px;
+  height: 264px;
   border-radius: 100px;
   overflow: hidden;
   opacity: 0;
@@ -339,7 +339,7 @@ section.technologies {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 64px;
+  margin-bottom: 24px;
 }
 
 .technologies .projects-encourager .text-wrapper h1 {
