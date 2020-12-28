@@ -357,13 +357,13 @@ section.technologies {
   margin: 32px auto;
 }
 
-.features ul {
+.features div {
   width: 100%;
   display: flex;
   list-style: none;
 }
 
-.features ul > * {
+.features div > * {
   display: inline-block;
   flex-basis: 50%;
 }
