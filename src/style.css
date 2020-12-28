@@ -218,7 +218,7 @@ section.home {
 /*TECHNOLOGIES SECTION*/
 
 section.technologies {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .technologies h4 {
@@ -334,12 +334,11 @@ section.technologies {
 }
 .technologies .projects-encourager {
   width: 100%;
-  position: absolute;
   bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 56px;
+  margin: 48px auto;
 }
 
 .technologies .projects-encourager .text-wrapper h1 {
