@@ -339,7 +339,7 @@ section.technologies {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 56px;
 }
 
 .technologies .projects-encourager .text-wrapper h1 {
