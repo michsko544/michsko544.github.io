@@ -23,16 +23,29 @@ document.querySelector("main").addEventListener("scroll",function(){
         setTimeout(function(){document.querySelector(".scroll-bar").style.transform = "translate3d(-50%, " + scrollVal + "px, 0)"},durationTime-10);
     }
 
+    function deleteDots(){
+        var list = document.querySelectorAll(".navbar li")
+        for(elem of list)
+            elem.classList.remove("active");
+    }
+
+    function setDot(selectedId){
+        deleteDots();
+        document.querySelector("#"+selectedId).classList.add("active");
+    }
+
     //scroll up
     if(direction<0){
         var scrollTrigger = scrollVal + offset;
         if(scrollVal + offset >=homeY && scrollVal + offset<techY && oldText!=="home"){
             animation("home");
             scroll(-50);
+            setDot("home")
         }
         else if(scrollVal + offset >=techY && scrollVal + offset<projY && oldText!=="technologies"){
             animation("technologies");
             scroll(-25);
+            deleteDots()
         }
     //scroll down
     } else if(direction>0) {
@@ -41,10 +54,26 @@ document.querySelector("main").addEventListener("scroll",function(){
         if( scrollTrigger>= techY && scrollTrigger < projY && oldText!=="technologies"){
             animation("technologies");
             scroll(-25);
+            deleteDots();
         }
         if( scrollTrigger >= projY && oldText!=="projects"){
             animation("projects");
             scroll(0);
+            setDot("projects")
         }
     }
 })
+
+var menuVisibility = false;
+
+document.querySelector(".menu-btn").onclick = function(){
+    if(menuVisibility){
+        document.querySelector(".menu-btn").classList.remove("active");
+        document.querySelector(".navbar").classList.remove("active");
+        menuVisibility=false;
+    } else {
+        document.querySelector(".menu-btn").classList.add("active");
+        document.querySelector(".navbar").classList.add("active");
+        menuVisibility=true;
+    }
+}

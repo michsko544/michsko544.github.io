@@ -12,9 +12,23 @@
     <link rel="stylesheet" href="./assets/sal.css">
   </head>
   <body>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li class="active" id="home" style="--i:1"><a href="#home-section" role="button"><h1>HOME</h1></a></li>
+                <li id="projects" style="--i:2"><a href="#projects-section" role="button"><h1>PROJECTS</h1></a></li>
+                <li id="github" style="--i:3"><a href="https://github.com/michsko544" target="_blank" role="button" rel="noopener noreferrer"><h1>GITHUB</h1></a></li>
+                <li id="linkedin" style="--i:4"><a href="https://pl.linkedin.com/in/micha%C5%82-skorus" target="_blank" role="button" rel="noopener noreferrer"><h1>LINKEDIN</h1></a></li>
+            </ul>
+        </nav>
+    </div>
+    <button class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <main>
-        <div class="navbar"></div>
-        <section class="home">
+        <section class="home" id="home-section">
             <h4>HOME</h4>
             <div class="flex">
                 <article class="intro-wrapper">
@@ -124,24 +138,27 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section class="projects" id="project-section">
             <div class="bg-text-wrapper">
                 <h4>PROJECTS</h4>
             </div>
             <div class="projects-container swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="project-wrapper swiper-slide">
+                    <a href="https://www.hermoso-butik.pl/" target="_blank" rel="noopener noreferrer" class="project-wrapper swiper-slide">
                         <img src="../assets/hermoso-min.jpg" alt="hermoso-butik"/>
+                        <h2>01/03</h2>
                         <h1>Hermoso<br>butik</h1>
-                    </div>
-                    <div class="project-wrapper swiper-slide">
+                    </a>
+                    <a href="https://teamfood-env-production.herokuapp.com/" target="_blank"  rel="noopener noreferrer"class="project-wrapper swiper-slide">
                         <img src="../assets/teamfood-min.jpg" alt="teamfood"  style="opacity:0.8"/>
+                        <h2>02/03</h2>
                         <h1>Teamfood<br>Order-food app</h1>
-                    </div>
-                    <div class="project-wrapper swiper-slide">
+                    </a>
+                    <a href="https://qyral.myshopify.com/" target="_blank"  rel="noopener noreferrer"class="project-wrapper swiper-slide">
                         <img src="../assets/qyral-min.jpg" alt="qyral" />
+                        <h2>03/03</h2>
                         <h1>Qyral<br>skincare</h1>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="scroll-icon-wrapper">

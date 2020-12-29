@@ -2,6 +2,7 @@
 
 :root {
   --dark-blue: #060016;
+  --dark-blue-light: rgba(6, 0, 22, 0.95);
   --font-color: white;
 }
 
@@ -78,7 +79,8 @@ p {
 }
 
 main {
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   height: 100vh;
   scroll-snap-type: block mandatory;
 }
@@ -86,6 +88,109 @@ main {
 section {
   position: relative;
   scroll-snap-align: start;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--dark-blue-light);
+  transition: 0.5s all 0.3s cubic-bezier(0, 0.52, 0, 1);
+  transform: translatex(100%);
+  z-index: 20;
+}
+
+.navbar.active {
+  transform: translateX(0%);
+}
+
+.navbar nav {
+  width: 100%;
+  height: 100vh;
+}
+
+.navbar nav ul {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  transform: translateY(40px);
+}
+
+.navbar nav ul li {
+  padding-bottom: 40px;
+  position: relative;
+  transform: translateX(1000px);
+  transition: 0.5s all cubic-bezier(0.1, 0.52, 0, 1);
+  transition-delay: calc(var(--i) * 0.1s);
+}
+
+.navbar.active nav ul li {
+  transform: translateX(0px);
+}
+
+.navbar nav ul li.active h1::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--font-color);
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--font-color);
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  background-color: inherit;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+}
+
+.menu-btn span {
+  height: 2px;
+  width: 13px;
+  background-color: var(--font-color);
+  transition: 0.5s all 0.3s cubic-bezier(0, 0.52, 0, 1);
+}
+
+.menu-btn span:nth-child(2) {
+  margin: 2px 0;
+}
+
+.menu-btn.active span {
+  width: 14px;
+}
+
+.menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate3d(4px, 4px, 0);
+}
+
+.menu-btn.active span:nth-child(2) {
+  visibility: hidden;
+  margin: 4px 0;
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate3d(4px, -5px, 0);
 }
 
 /*HOME SECTION*/
@@ -431,6 +536,16 @@ section.projects {
   text-align: right;
 }
 
+.projects .projects-container .project-wrapper h2 {
+  position: absolute;
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--font-color);
+  top: 24px;
+  left: 24px;
+  text-align: right;
+}
+
 .projects .scroll-icon-wrapper {
   margin-left: auto;
   width: fit-content;
@@ -534,7 +649,7 @@ footer .small-text {
 /*loader*/
 
 .loader {
-  z-index: 20;
+  z-index: 40;
   height: 100vh;
   width: 100%;
   position: absolute;
