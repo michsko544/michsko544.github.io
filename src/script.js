@@ -66,7 +66,8 @@ document.querySelector("main").addEventListener("scroll",function(){
 
 var menuVisibility = false;
 
-document.querySelector(".menu-btn").onclick = function(){
+document.querySelectorAll(".toggle-menu").forEach(function(node){
+    node.onclick = function(){
     if(menuVisibility){
         document.querySelector(".menu-btn").classList.remove("active");
         document.querySelector(".navbar").classList.remove("active");
@@ -76,4 +77,4 @@ document.querySelector(".menu-btn").onclick = function(){
         document.querySelector(".navbar").classList.add("active");
         menuVisibility=true;
     }
-}
+}})

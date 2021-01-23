@@ -451,6 +451,12 @@ section.technologies {
   margin-bottom: 12px;
 }
 
+.technologies .projects-encourager img {
+  width: 14px;
+  height: 17px;
+  margin: 0 auto;
+}
+
 .features {
   padding: 0 24px;
   width: 100%;
@@ -546,11 +552,26 @@ section.projects {
   text-align: right;
 }
 
-.projects .scroll-icon-wrapper {
+.projects .scroll-info-wrapper {
   margin-left: auto;
   width: fit-content;
   padding-right: 24px;
-  margin-top: 24px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.projects .scroll-info-wrapper span {
+  font-size: 12px;
+  color: var(--font-color);
+  text-transform: uppercase;
+  font-family: "Matroska";
+  margin-right: 12px;
+}
+
+.projects .scroll-info-wrapper img {
+  width: 22px;
+  height: 14px;
 }
 
 .contact-container {
@@ -568,7 +589,7 @@ section.projects {
 /*footer*/
 footer {
   position: absolute;
-  bottom: 48px;
+  bottom: 12px;
   padding: 0 24px;
   overflow: hidden;
   width: 100%;
@@ -614,7 +635,7 @@ footer .small-text {
 }
 
 .scrollbar .scroll .section-name {
-  color: white;
+  color: var(--font-color);
   writing-mode: vertical-rl;
   text-orientation: upright;
   text-transform: uppercase;
@@ -629,7 +650,7 @@ footer .small-text {
   width: 2px;
   height: 250px;
   content: "";
-  background-color: white;
+  background-color: var(--font-color);
   margin: 0 auto;
 }
 
@@ -637,7 +658,7 @@ footer .small-text {
   width: 10px;
   height: 200px;
   content: "";
-  background-color: white;
+  background-color: var(--font-color);
   margin: 0 auto;
   border-radius: 100px;
   position: absolute;

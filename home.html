@@ -15,14 +15,14 @@
     <div class="navbar">
         <nav>
             <ul>
-                <li class="active" id="home" style="--i:1"><a href="#home-section" role="button"><h1>HOME</h1></a></li>
-                <li id="projects" style="--i:2"><a href="#projects-section" role="button"><h1>PROJECTS</h1></a></li>
-                <li id="github" style="--i:3"><a href="https://github.com/michsko544" target="_blank" role="button" rel="noopener noreferrer"><h1>GITHUB</h1></a></li>
-                <li id="linkedin" style="--i:4"><a href="https://pl.linkedin.com/in/micha%C5%82-skorus" target="_blank" role="button" rel="noopener noreferrer"><h1>LINKEDIN</h1></a></li>
+                <li class="toggle-menu active" id="home" style="--i:1"><a href="#home-section" role="button"><h1>HOME</h1></a></li>
+                <li class="toggle-menu" id="projects" style="--i:2"><a href="#project-section" role="button"><h1>PROJECTS</h1></a></li>
+                <li class="toggle-menu" id="github" style="--i:3"><a href="https://github.com/michsko544" target="_blank" role="button" rel="noopener noreferrer"><h1>GITHUB</h1></a></li>
+                <li class="toggle-menu" id="linkedin" style="--i:4"><a href="https://pl.linkedin.com/in/micha%C5%82-skorus" target="_blank" role="button" rel="noopener noreferrer"><h1>LINKEDIN</h1></a></li>
             </ul>
         </nav>
     </div>
-    <button class="menu-btn">
+    <button class="menu-btn toggle-menu">
         <span></span>
         <span></span>
         <span></span>
@@ -161,7 +161,8 @@
                     </a>
                 </div>
             </div>
-            <div class="scroll-icon-wrapper">
+            <div class="scroll-info-wrapper">
+                <span>SWIPE</span>
                 <img src="./assets/arrows.svg" alt="arrows-icon" />
             </div>
             <a href="mailto:michsko@poczta.onet.pl">
@@ -237,5 +238,6 @@
             once:false
         });
     </script>
+    <noscript>Your browser does not support JavaScript!</noscript>
   </body>
 </html>
