@@ -227,6 +227,10 @@ section.home {
   animation: fadein 2s 2.4s forwards;
 }
 
+.home .intro-wrapper .vintage {
+  display: none;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -455,6 +459,10 @@ section.technologies {
   width: 14px;
   height: 17px;
   margin: 0 auto;
+}
+
+.technologies .technology-content {
+  flex-direction: column;
 }
 
 .features {
@@ -721,5 +729,243 @@ footer .small-text {
 
   to {
     transform: translateX(-100vw);
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 200px;
+    line-height: 148px;
+    left: 0;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .home .intro-wrapper {
+    padding-right: unset;
+    padding-left: 24px;
+  }
+  .home .intro-wrapper .name-wrapper {
+    margin-bottom: 48px;
+  }
+
+  .home .intro-wrapper .position-wrapper {
+    margin-bottom: 48px;
+  }
+
+  .home .intro-wrapper ul.social-media {
+    display: none;
+  }
+
+  .home .intro-wrapper .vintage {
+    font-family: "Matroska";
+    font-size: 100px;
+    line-height: 100px;
+    color: var(--font-color);
+    opacity: 0.15;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    transform: translate3d(170px, -93px, 0);
+  }
+
+  .home .img-wrapper {
+    margin-right: 24px;
+    height: auto;
+    border-radius: 120px;
+  }
+
+  .home .home-content {
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 888px;
+    margin: 0 auto;
+  }
+
+  /*TECHNOLOGIES SECTION*/
+
+  .technologies h4 {
+    font-size: 100px;
+    line-height: 80px;
+  }
+
+  .technologies .bg-text-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+  }
+
+  .technologies .technology-wrapper {
+    position: relative;
+    width: 100%;
+    padding-left: 24px;
+  }
+
+  .technologies .technology-wrapper img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 100px;
+  }
+
+  .technologies .technology-wrapper .img-title-wrapper {
+    position: absolute;
+    right: 0px;
+    bottom: 28px;
+    width: 100%;
+    padding-left: 24px;
+  }
+
+  .technologies .technology-wrapper .img-title-wrapper h1 {
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .technologies .technology-wrapper .img-title-wrapper h1 br {
+    display: none;
+  }
+
+  .technologies .technology-wrapper .circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .technologies .technology-wrapper .circle img {
+    width: 72px;
+    height: auto;
+    object-fit: contain;
+    border-radius: unset;
+  }
+
+  .technologies .technology-wrapper .vue-wrapper {
+    position: absolute;
+    top: 113px;
+    left: 66px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .technologies .technology-wrapper .vue-wrapper img {
+    width: 48px;
+    height: auto;
+    transform: translateY(2px);
+  }
+
+  .technologies .technology-wrapper .react-wrapper {
+    position: absolute;
+    top: 52px;
+    left: 165px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .technologies .technology-wrapper .react-wrapper img {
+    width: 80px;
+    height: auto;
+  }
+
+  .technologies .technology-wrapper .ts-wrapper {
+    position: absolute;
+    top: 172px;
+    left: 191px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .technologies .technology-wrapper .js-wrapper {
+    position: absolute;
+    top: 297px;
+    left: 193px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .technologies .technology-wrapper .js-wrapper img {
+    width: 42px;
+    height: auto;
+    border-radius: 2px;
+  }
+
+  .technologies .technology-wrapper .css-wrapper {
+    position: absolute;
+    top: 236px;
+    left: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .technologies .technology-wrapper .css-wrapper img {
+    width: unset;
+    height: 48px;
+  }
+  .technologies .projects-encourager {
+    bottom: 52px;
+    margin: 48px auto 0;
+    position: absolute;
+  }
+
+  .technologies .projects-encourager .text-wrapper h1 {
+    text-align: center;
+    margin-bottom: 12px;
+    max-width: 680px;
+    margin: 0 auto 36px;
+  }
+
+  .technologies .projects-encourager img {
+    width: auto;
+    height: 30px;
+    margin: 0 auto;
+  }
+
+  .technologies .technology-content {
+    flex-direction: row-reverse;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 152px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features {
+    padding: 0 24px 0 0;
+    width: 100%;
+  }
+
+  .features h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 48px;
+  }
+
+  .features ul li {
+    margin-left: 0px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+  }
+
+  .features ul li p {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .features ul li:before {
+    min-width: 14px;
+    min-height: 11px;
+    transform: translateY(8px);
   }
 }
