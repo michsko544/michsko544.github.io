@@ -144,23 +144,31 @@
             <div class="bg-text-wrapper">
                 <h4>PROJECTS</h4>
             </div>
-            <div class="projects-container swiper-container">
-                <div class="swiper-wrapper">
-                    <a href="https://www.hermoso-butik.pl/" target="_blank" rel="noopener noreferrer" class="project-wrapper swiper-slide">
-                        <img src="../assets/hermoso-min.jpg" alt="hermoso-butik"/>
-                        <h2>01/03</h2>
-                        <h1>Hermoso<br>butik</h1>
-                    </a>
-                    <a href="https://teamfood-env-production.herokuapp.com/" target="_blank"  rel="noopener noreferrer"class="project-wrapper swiper-slide">
-                        <img src="../assets/teamfood-min.jpg" alt="teamfood"  style="opacity:0.8"/>
-                        <h2>02/03</h2>
-                        <h1>Teamfood<br>Order-food app</h1>
-                    </a>
-                    <a href="https://qyral.myshopify.com/" target="_blank"  rel="noopener noreferrer"class="project-wrapper swiper-slide">
-                        <img src="../assets/qyral-min.jpg" alt="qyral" />
-                        <h2>03/03</h2>
-                        <h1>Qyral<br>skincare</h1>
-                    </a>
+            <div class="projects-swiper-container">
+                <div class="swiper-button-prev">
+                    <img src="./assets/swiper-arrow.svg" alt="arrow-left"/>
+                </div>
+                <div class="projects-container swiper-container">
+                    <div class="swiper-wrapper">
+                        <a href="https://www.hermoso-butik.pl/" target="_blank" rel="noopener noreferrer" class="project-wrapper swiper-slide">
+                            <img src="../assets/hermoso-min.jpg" alt="hermoso-butik"/>
+                            <h2>01/03</h2>
+                            <h1>Hermoso<br>butik</h1>
+                        </a>
+                        <a href="https://teamfood-env-production.herokuapp.com/" target="_blank"  rel="noopener noreferrer"class="project-wrapper swiper-slide">
+                            <img src="../assets/teamfood-min.jpg" alt="teamfood"  style="opacity:0.8"/>
+                            <h2>02/03</h2>
+                            <h1>Teamfood<br>Order-food app</h1>
+                        </a>
+                        <a href="https://qyral.myshopify.com/" target="_blank"  rel="noopener noreferrer"class="project-wrapper swiper-slide">
+                            <img src="../assets/qyral-min.jpg" alt="qyral" />
+                            <h2>03/03</h2>
+                            <h1>Qyral<br>skincare</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-next">
+                    <img src="./assets/swiper-arrow.svg" alt="arrow-right"/>
                 </div>
             </div>
             <div class="scroll-info-wrapper">
@@ -232,7 +240,11 @@
     <script src="./src/script.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container',{
-            loop:true
+            loop:true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
         });
     </script>
     <script>
