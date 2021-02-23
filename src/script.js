@@ -97,7 +97,7 @@ setInterval(function(){
         for(var i = 0; i< glitch.length; i++){
             glitch[i].style.left = Math.floor(Math.random()*100) + "%";
             glitch[i].style.top = Math.floor(Math.random()*100) + "%";
-            glitch[i].style.width = Math.floor(Math.random()*300) + "px";
+            glitch[i].style.width = 150+ Math.floor(Math.random()*150) + "px";
             glitch[i].style.height = Math.floor(Math.random()*150) + "px";
         }
     },term);

@@ -31,6 +31,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor:none;
 }
 
 h1 {
@@ -123,7 +124,7 @@ section {
 }
 
 .navbar nav ul li {
-  padding-bottom: 40px;
+  padding: 40px 70px;
   position: relative;
   transform: translateX(1000px);
   transition: 0.5s all cubic-bezier(0.1, 0.52, 0, 1);
@@ -153,7 +154,7 @@ section {
   height: 25px;
   border: 2px solid var(--font-color);
   border-radius: 50%;
-  cursor: pointer;
+  cursor: none;
   outline: none;
   background-color: inherit;
 
@@ -162,6 +163,15 @@ section {
   align-items: center;
   justify-content: center;
   z-index: 30;
+}
+
+.menu-btn-wrapper{
+  display: block;
+  width: 49px;
+  height: 49px;
+  position: absolute;
+  right: 64px;
+  top: 60px;
 }
 
 .menu-btn span {
@@ -869,7 +879,7 @@ footer .small-text {
   .social-media li {
     margin-left: 0;
     margin-top: 24px;
-    cursor: pointer;
+    cursor: none;
   }
 
   .social-media li:hover img {
@@ -1118,7 +1128,7 @@ footer .small-text {
     width: 50px;
     height: fit-content;
     margin-top: 60px;
-    cursor: pointer;
+    cursor: none;
   }
 
   @keyframes moveRightLeft {
