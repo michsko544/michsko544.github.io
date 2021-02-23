@@ -29,12 +29,9 @@ body {
   overflow: hidden;
 }
 
-body #magicMouseCursor{
-  display:none;
-}
-
+body #magicMouseCursor,
 body #magicPointer{
-  display:none;
+  display:none !important;
 }
 
 a {
@@ -487,7 +484,7 @@ section.technologies {
 
 .technologies .projects-encourager .text-wrapper h1 {
   text-align: center;
-  margin-bottom: 12px;
+  margin: 0px 24px 12px;
 }
 
 .technologies .projects-encourager img {
@@ -793,12 +790,8 @@ footer .small-text {
     line-height: 22px;
   }
 
-  body #magicMouseCursor{
-    display:block;
-  }
-
-  body #magicPointer{
-    display:block;
+  body #magicMouseCursor,body #magicPointer{
+    display:block !important;
   }
 
   main {
@@ -930,9 +923,6 @@ footer .small-text {
     margin-right: 24px;
     height: 650px;
     border-radius: 60px;
-  }
-
-  .home .img-wrapper > div {
   }
 
   .home .home-content {
@@ -1069,8 +1059,10 @@ footer .small-text {
   .technologies .projects-encourager .text-wrapper h1 {
     text-align: center;
     margin-bottom: 12px;
-    max-width: 680px;
+    max-width: 940px;
     margin: 0 auto 36px;
+    font-size: 48px;
+    line-height: 50px;
   }
 
   .technologies .projects-encourager img {
