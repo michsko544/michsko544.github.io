@@ -30,13 +30,13 @@ body {
 }
 
 body #magicMouseCursor,
-body #magicPointer{
-  display:none !important;
+body #magicPointer {
+  display: none !important;
 }
 
 a {
   text-decoration: none;
-  cursor:none;
+  cursor: none;
 }
 
 h1 {
@@ -170,7 +170,7 @@ section {
   z-index: 30;
 }
 
-.menu-btn-wrapper{
+.menu-btn-wrapper {
   display: block;
   width: 49px;
   height: 49px;
@@ -790,8 +790,9 @@ footer .small-text {
     line-height: 22px;
   }
 
-  body #magicMouseCursor,body #magicPointer{
-    display:block !important;
+  body #magicMouseCursor,
+  body #magicPointer {
+    display: block !important;
   }
 
   main {
@@ -1054,6 +1055,7 @@ footer .small-text {
     bottom: 52px;
     margin: 48px auto 0;
     position: absolute;
+    display: none;
   }
 
   .technologies .projects-encourager .text-wrapper h1 {
